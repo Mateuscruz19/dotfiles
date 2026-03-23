@@ -63,8 +63,15 @@ return {
 
 -- Treesitter
 {
-"nvim-treesitter/nvim-treesitter",
-build = ":TSUpdate"
+  "nvim-treesitter/nvim-treesitter",
+  branch = "master",
+  build = ":TSUpdate",
+  config = function()
+    require("nvim-treesitter.configs").setup({
+      ensure_installed = { "python", "lua", "javascript", "typescript", "bash" },
+      highlight = { enable = true },
+    })
+  end,
 },
 
 -- LSP

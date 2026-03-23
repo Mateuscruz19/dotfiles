@@ -28,7 +28,7 @@ vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", { desc = "Limpar busca" })
 -- ============================================================
 
 -- Explorador
-vim.keymap.set("n", "<leader>e", ":Neotree toggle reveal<CR>", { desc = "Abrir/fechar explorador" })
+vim.keymap.set("n", "<leader>e", ":Neotree toggle reveal position=left<CR>", { desc = "Abrir/fechar explorador" })
 vim.keymap.set("n", "<leader><Tab>", function()
   local neotree_wins = vim.tbl_filter(function(win)
     local buf = vim.api.nvim_win_get_buf(win)
