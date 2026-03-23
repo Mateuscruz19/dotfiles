@@ -1,0 +1,10 @@
+# Plugins instalados (cada máquina instala os seus)
+/plugin/
+/pack/
+
+# Arquivos de swap do nvim
+*.swp
+*.swo
+
+# Treesitter parsers compilados
+/parser/
