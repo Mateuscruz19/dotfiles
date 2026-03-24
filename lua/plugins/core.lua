@@ -2,22 +2,24 @@ return {
 
 -- Tema
 {
-  "catppuccin/nvim",
-  name = "catppuccin",
+  "ellisonleao/gruvbox.nvim",
   priority = 1000,
   config = function()
-    require("catppuccin").setup({
-      flavour = "mocha", -- latte, frappe, macchiato, mocha
-      integrations = {
-        bufferline = true,
-        neo_tree = true,
-        telescope = true,
-        treesitter = true,
-        indent_blankline = { enabled = true },
-        which_key = true,
+    require("gruvbox").setup({
+      contrast = "hard",
+      transparent_mode = true,
+      overrides = {
+        SignColumn = { bg = "NONE" },
+        GruvboxRedSign = { bg = "NONE" },
+        GruvboxGreenSign = { bg = "NONE" },
+        GruvboxYellowSign = { bg = "NONE" },
+        GruvboxBlueSign = { bg = "NONE" },
+        GruvboxPurpleSign = { bg = "NONE" },
+        GruvboxAquaSign = { bg = "NONE" },
+        GruvboxOrangeSign = { bg = "NONE" },
       },
     })
-    vim.cmd.colorscheme("catppuccin")
+    vim.cmd.colorscheme("gruvbox")
   end,
 },
 
